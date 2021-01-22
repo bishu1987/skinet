@@ -19,7 +19,7 @@
     "eofline": true,
     "import-blacklist": [
       true,
-      "rxjs/Rx"
+      "rxjs/Rx" 
     ],
     "import-spacing": true,
     "indent": {
@@ -150,3 +150,6 @@
     ]
   }
 }
+
+  
+
