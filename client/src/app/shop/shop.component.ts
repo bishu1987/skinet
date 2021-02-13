@@ -1,4 +1,3 @@
-import { IfStmt, ifStmt } from '@angular/compiler/src/output/output_ast';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { IBrand } from '../shared/models/brand';
 import { IProduct } from '../shared/models/product';
@@ -11,6 +10,7 @@ import { ShopService } from './shop.service';
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.scss']
 })
+
 export class ShopComponent implements OnInit {
   @ViewChild('search', {static: true}) searchTerm: ElementRef;
   products: IProduct[];
@@ -77,10 +77,11 @@ export class ShopComponent implements OnInit {
     this.shopParams.pageNumber = 1;
     this.getProducts();
   }
+
   // tslint:disable-next-line: typedef
   onSortSelected(sort: string){
-    this.shopParams.sort = sort;
-    this.getProducts();
+      this.shopParams.sort = sort;
+      this.getProducts();
   }
 
   // tslint:disable-next-line: typedef
